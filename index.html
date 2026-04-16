@@ -8,58 +8,108 @@
 </head>
 <body>
   <header class="hero">
-    <div class="hero-overlay">
-      <div class="container">
-        <div class="logo-box">NDF</div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-top">
+        <img src="bilder/logo-ndf.png" alt="NDF Logo" class="logo" />
+      </div>
+
+      <div class="hero-textbox">
         <p class="eyebrow">Digitales Prospekt</p>
         <h1>Flächenheizsysteme</h1>
         <p class="hero-text">
           Leistungen, Systeme und aktuelle Preise auf einen Blick.
         </p>
 
-        <nav class="hero-nav">
-          <a href="#ueber-uns">Über uns</a>
-          <a href="#preise">Preise</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
+        <div class="hero-actions">
+          <a href="#preise" class="btn btn-primary">Preise ansehen</a>
+          <a href="#kontakt" class="btn btn-secondary">Kontakt</a>
+        </div>
       </div>
     </div>
   </header>
 
+  <nav class="sticky-nav">
+    <div class="container nav-inner">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#plus">Plus Programm</a>
+      <a href="#preise">Preise</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
   <main>
     <section id="ueber-uns" class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">NDF – Norddeutsche Flächenheizsysteme</p>
-          <h2>Wir schaffen das passende Klima und die richtige Temperatur für Ihr Zuhause</h2>
+      <div class="container split-layout">
+        <div class="split-image">
+          <img src="bilder/ueber-uns.jpg" alt="Fußbodenheizung NDF" />
         </div>
 
-        <div class="card">
+        <div class="split-text">
+          <p class="section-kicker">NDF – Norddeutsche Flächenheizsysteme</p>
+          <h2>Wir schaffen das passende Klima und die richtige Temperatur für Ihr Zuhause</h2>
           <p>
-            Bei uns erhalten Sie alles aus einer Hand: Fußbodenheizung, Estrich und Bodenbeläge.
-            Unser Leistungspaket beinhaltet Planung, Logistik und Montage kompletter
-            Fußbodenheizsysteme. Auch Frässysteme, Dämm- und Ausgleichsarbeiten sowie weitere
-            Leistungen gehören zum Angebot. :contentReference[oaicite:1]{index=1}
+            Bei NDF erhalten Kunden Fußbodenheizung, Estrich und Bodenbeläge aus einer Hand.
+            Das Leistungspaket umfasst Planung, Logistik und Montage kompletter
+            Flächenheizsysteme. Im Prospekt werden außerdem Frässysteme, Dämm- und
+            Ausgleichsarbeiten sowie weitere Leistungen hervorgehoben. :contentReference[oaicite:1]{index=1}
           </p>
         </div>
       </div>
     </section>
 
-    <section id="preise" class="section section-alt">
+    <section id="plus" class="section section-accent">
+      <div class="container">
+        <div class="section-header light">
+          <p class="section-kicker kicker-light">NDF Plus Programm</p>
+          <h2>Mehr als nur Material und Montage</h2>
+          <p>
+            Im Prospekt wird das Plus Programm unter anderem mit Projektierung,
+            Heizlastberechnung, Montageplanung, Baustellenlogistik und Abrechnung beschrieben. :contentReference[oaicite:2]{index=2}
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Planung</h3>
+            <p>Kostenfreie Projektierung, Heizlastberechnung und CAD-gestützte Planung.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Baustellenvorbereitung</h3>
+            <p>Digitale Höhenkontrolle und saubere Projektvorbereitung.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Logistik</h3>
+            <p>Termingerechte Materialanlieferung und Entsorgung von Restmaterial.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Abrechnung</h3>
+            <p>Abrechnung nach tatsächlich ausgeführten Flächen und Stückzahlen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preise" class="section section-light">
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Leistungen & Angebote</p>
           <h2>Aktuelle Preise</h2>
           <p>
-            Die Preise werden aus einer CSV-Datei geladen und können dadurch kurzfristig
-            angepasst werden.
+            Die Preisbereiche im Prospekt sind klar nach Systemen gegliedert, etwa
+            Tackersysteme und Frässystem. :contentReference[oaicite:3]{index=3}
           </p>
         </div>
 
         <article class="price-block">
           <div class="price-block-header">
-            <h3>Tackersystem Hausmarke</h3>
-            <p>Lieferung und Montage</p>
+            <div>
+              <p class="price-category">Flächen-Warmwasser-Fußbodenheizung</p>
+              <h3>Tackersystem Hausmarke</h3>
+              <p>Lieferung und Montage</p>
+            </div>
           </div>
 
           <div class="price-table">
@@ -107,47 +157,56 @@
           </div>
         </article>
 
-        <article class="price-block">
-          <div class="price-block-header">
-            <h3>Frässystem</h3>
-            <p>Lieferung und Montage</p>
+        <article class="price-highlight">
+          <div class="price-highlight-image">
+            <img src="bilder/fraessystem.jpg" alt="Frässystem" />
           </div>
 
-          <div class="price-table">
-            <div class="price-row price-head">
-              <div>Bezeichnung</div>
-              <div>Einheit</div>
-              <div>Preis</div>
+          <div class="price-highlight-content">
+            <div class="price-block-header compact">
+              <div>
+                <p class="price-category">Leistungen & Angebote</p>
+                <h3>Frässystem</h3>
+                <p>Lieferung und Montage</p>
+              </div>
             </div>
 
-            <div class="price-row">
-              <div>Frässystem bis 29 m²</div>
-              <div data-unit-id="fraes_bis_29">wird geladen...</div>
-              <div data-price-id="fraes_bis_29">wird geladen...</div>
-            </div>
+            <div class="price-table">
+              <div class="price-row price-head">
+                <div>Bezeichnung</div>
+                <div>Einheit</div>
+                <div>Preis</div>
+              </div>
 
-            <div class="price-row">
-              <div>Frässystem bis 49 m²</div>
-              <div data-unit-id="fraes_bis_49">wird geladen...</div>
-              <div data-price-id="fraes_bis_49">wird geladen...</div>
-            </div>
+              <div class="price-row">
+                <div>Frässystem bis 29 m²</div>
+                <div data-unit-id="fraes_bis_29">wird geladen...</div>
+                <div data-price-id="fraes_bis_29">wird geladen...</div>
+              </div>
 
-            <div class="price-row">
-              <div>Frässystem ab 50 m²</div>
-              <div data-unit-id="fraes_ab_50">wird geladen...</div>
-              <div data-price-id="fraes_ab_50">wird geladen...</div>
-            </div>
+              <div class="price-row">
+                <div>Frässystem bis 49 m²</div>
+                <div data-unit-id="fraes_bis_49">wird geladen...</div>
+                <div data-price-id="fraes_bis_49">wird geladen...</div>
+              </div>
 
-            <div class="price-row">
-              <div>Baustelleneinrichtung</div>
-              <div data-unit-id="baustelleneinrichtung">wird geladen...</div>
-              <div data-price-id="baustelleneinrichtung">wird geladen...</div>
-            </div>
+              <div class="price-row">
+                <div>Frässystem ab 50 m²</div>
+                <div data-unit-id="fraes_ab_50">wird geladen...</div>
+                <div data-price-id="fraes_ab_50">wird geladen...</div>
+              </div>
 
-            <div class="price-row">
-              <div>Entsorgungskosten</div>
-              <div data-unit-id="entsorgungskosten">wird geladen...</div>
-              <div data-price-id="entsorgungskosten">wird geladen...</div>
+              <div class="price-row">
+                <div>Baustelleneinrichtung</div>
+                <div data-unit-id="baustelleneinrichtung">wird geladen...</div>
+                <div data-price-id="baustelleneinrichtung">wird geladen...</div>
+              </div>
+
+              <div class="price-row">
+                <div>Entsorgungskosten</div>
+                <div data-unit-id="entsorgungskosten">wird geladen...</div>
+                <div data-price-id="entsorgungskosten">wird geladen...</div>
+              </div>
             </div>
           </div>
         </article>
@@ -156,15 +215,22 @@
 
     <section id="kontakt" class="section">
       <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">Kontakt</p>
-          <h2>NDF Norddeutsche Flächenheizsysteme GmbH</h2>
-        </div>
+        <div class="contact-box">
+          <div>
+            <p class="section-kicker">Kontakt</p>
+            <h2>NDF Norddeutsche Flächenheizsysteme GmbH</h2>
+            <p>
+              Raiffeisenstraße 13<br />
+              21641 Apensen
+            </p>
+            <p>Telefon: 04163 910 80 91</p>
+            <p>E-Mail: info@ndf-gmbh.de</p>
+          </div>
 
-        <div class="card contact-card">
-          <p>Raiffeisenstraße 13<br />21641 Apensen</p>
-          <p>Telefon: 04163 910 80 91</p>
-          <p>E-Mail: info@ndf-gmbh.de</p>
+          <div class="contact-side">
+            <p class="contact-note">Aktuelle Preise und Leistungen digital abrufbar.</p>
+            <p id="last-update">Preise werden geladen...</p>
+          </div>
         </div>
       </div>
     </section>
@@ -173,7 +239,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span>© NDF – Digitales Prospekt</span>
-      <span id="last-update">Preise werden geladen...</span>
+      <span>Standort Apensen</span>
     </div>
   </footer>
 
