@@ -1,0 +1,12 @@
+id;bezeichnung;preis;einheit
+tacker_20_2_wlg045;Tackerplatte 20-2 mm WLG045;22,55;je m²
+tacker_30_3_wlg045;Tackerplatte 30-3 mm WLG045;23,10;je m²
+tacker_30_2_wlg040;Tackerplatte 30-2 mm WLG040;23,34;je m²
+tacker_30_wlg035;Tackerplatte 30 mm WLG035;24,30;je m²
+hohlkammer_2mm;2 mm Hohlkammer-Platte;24,36;je m²
+nur_rohr_bauseits;nur Rohr, Dämmung komplett bauseits;15,49;je m²
+fraes_bis_29;Frässystem mit 10 cm VA bis 29 m²;1250,00;pauschal
+fraes_bis_49;Frässystem mit 10 cm VA bis 49 m²;42,60;je m²
+fraes_ab_50;Frässystem mit 10 cm VA ab 50 m²;35,00;je m²
+baustelleneinrichtung;Baustelleneinrichtung;250,00;pro Einsatz
+entsorgungskosten;Entsorgungskosten;295,00;pauschal

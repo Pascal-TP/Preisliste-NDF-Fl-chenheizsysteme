@@ -428,308 +428,100 @@ img {
 }
 
 /* =========================
-   FLIPBOOK
+   PASSWORT-OVERLAY
 ========================= */
 
-.flipbook-body {
-  margin: 0;
-  background: linear-gradient(180deg, #dfe3e8 0%, #cdd4db 100%);
-  color: var(--text);
+.overlay-open {
+    overflow: hidden;
 }
 
-.flipbook-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+.access-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.flipbook-topbar-inner {
-  width: min(1200px, calc(100% - 24px));
-  margin: 0 auto;
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-  padding: 10px 0;
+.access-overlay.is-visible {
+    display: flex;
 }
 
-.flipbook-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.access-card {
+    width: min(460px, 100%);
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    padding: 32px 28px;
+    text-align: center;
 }
 
-.flipbook-brand-logo {
-  width: 78px;
-  max-width: 20vw;
-  background: #fff;
-  border-radius: 10px;
-  padding: 6px 8px;
+.access-logo {
+    width: 180px;
+    margin: 0 auto 18px;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 10px 14px;
+    border-radius: 14px;
 }
 
-.flipbook-subtitle {
-  font-size: 0.9rem;
-  color: var(--muted);
+.access-kicker {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--red);
 }
 
-.flipbook-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+.access-card h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    line-height: 1.05;
+    color: var(--dark);
 }
 
-.flipbook-link,
-.flipbook-btn {
-  border: 0;
-  background: var(--red);
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
+.access-text {
+    margin: 0 0 22px;
+    color: var(--muted);
 }
 
-.flipbook-link {
-  background: var(--dark);
+.access-form {
+    display: grid;
+    gap: 12px;
 }
 
-.flipbook-main {
-  padding: 28px 12px 40px;
+.access-input {
+    width: 100%;
+    min-height: 52px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 0 16px;
+    font-size: 1rem;
+    text-align: center;
 }
 
-.flipbook-wrapper {
-  width: min(1400px, 100%);
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+.access-input:focus {
+    outline: 2px solid rgba(215, 25, 32, 0.18);
+    border-color: var(--red);
 }
 
-#flipbook {
-  margin: 0 auto;
+.access-button {
+    width: 100%;
 }
 
-.page {
-  background: #fff;
+.access-error {
+    min-height: 24px;
+    margin: 14px 0 0;
+    color: var(--red);
+    font-weight: 700;
 }
 
-.page-content {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.standard-page,
-.accent-page,
-.contact-page {
-  padding: 34px 34px 28px;
-}
-
-.page-cover .page-content {
-  padding: 0;
-}
-
-.cover-page {
-  position: relative;
-}
-
-.cover-bg {
-  position: absolute;
-  inset: 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.cover-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.18));
-}
-
-.cover-inner {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  padding: 48px 42px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.cover-logo {
-  width: 180px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 14px;
-  padding: 12px 16px;
-  margin-bottom: auto;
-}
-
-.cover-kicker {
-  margin: 0 0 14px;
-  color: rgba(255, 255, 255, 0.9);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.cover-inner h1 {
-  margin: 0 0 14px;
-  color: #fff;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 0.96;
-}
-
-.cover-text {
-  margin: 0;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 430px;
-}
-
-.page-header {
-  margin-bottom: 22px;
-}
-
-.page-header h2 {
-  margin: 0 0 10px;
-  font-size: 2rem;
-  line-height: 1.05;
-}
-
-.page-header p:last-child {
-  margin-bottom: 0;
-}
-
-.page-header-light h2,
-.page-header-light p {
-  color: #fff;
-}
-
-.accent-page {
-  background: linear-gradient(135deg, var(--red) 0%, #ef2e35 100%);
-  color: #fff;
-}
-
-.page-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  align-items: stretch;
-}
-
-.page-split-fr {
-  grid-template-columns: 0.9fr 1.1fr;
-}
-
-.page-split-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-.page-split-text {
-  background: #f7f7f7;
-  border-radius: 18px;
-  padding: 24px;
-}
-
-.flip-feature-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.flip-feature-card {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.flip-feature-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.flip-price-header {
-  background: var(--red);
-  color: #fff;
-  border-radius: 18px 18px 0 0;
-  padding: 22px 24px;
-}
-
-.flip-price-header h2 {
-  margin: 0 0 6px;
-  font-size: 1.9rem;
-}
-
-.flip-price-header p:last-child {
-  margin-bottom: 0;
-}
-
-.flip-price-table {
-  border: 1px solid var(--border);
-  border-top: 0;
-  border-radius: 0 0 18px 18px;
-  overflow: hidden;
-}
-
-.compact-table {
-  border-top: 1px solid var(--border);
-  border-radius: 18px;
-}
-
-.flip-price-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 110px 110px;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.95rem;
-}
-
-.flip-price-row:last-child {
-  border-bottom: 0;
-}
-
-.flip-price-head {
-  background: #f5f5f5;
-  font-weight: 700;
-}
-
-.flip-contact-box {
-  grid-template-columns: 1fr 0.9fr;
-  padding: 24px;
-}
-
-.qrcode-image img {
-  max-width: 180px;
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 900px) {
-  .page-split,
-  .page-split-fr,
-  .flip-feature-grid,
-  .flip-contact-box {
-    grid-template-columns: 1fr;
-  }
-
-  .flip-price-row {
-    grid-template-columns: 1fr;
-  }
+.small-button {
+    margin-top: 14px;
+    min-height: 40px;
+    padding: 0 14px;
 }

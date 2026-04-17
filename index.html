@@ -9,6 +9,31 @@
 </head>
 
 <body>
+    <!-- Passwort-Overlay -->
+    <div id="access-overlay" class="access-overlay">
+        <div class="access-card">
+            <img src="bilder/logo-ndf.png" alt="NDF Logo" class="access-logo" />
+            <p class="access-kicker">Geschützter Preisbereich</p>
+            <h2>Bitte Passwort eingeben</h2>
+            <p class="access-text">
+                Nach Eingabe Ihres Passwortes wird automatisch die passende Preisliste geladen.
+            </p>
+
+            <form id="access-form" class="access-form">
+                <input
+                    type="password"
+                    id="access-password"
+                    class="access-input"
+                    placeholder="Passwort eingeben"
+                    autocomplete="off"
+                />
+                <button type="submit" class="btn btn-primary access-button">Preisliste öffnen</button>
+            </form>
+
+            <p id="access-error" class="access-error"></p>
+        </div>
+    </div>
+
     <header class="hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
@@ -28,7 +53,6 @@
                 <div class="hero-actions">
                     <a href="#preise" class="btn btn-primary">Preise ansehen</a>
                     <a href="#kontakt" class="btn btn-secondary">Kontakt</a>
-                    <a href="flipbook.html" class="btn btn-secondary">Hier geht es zur Flipbook-Demo</a>
                 </div>
             </div>
         </div>
@@ -67,13 +91,13 @@
                 <div class="section-header light">
                     <p class="section-kicker kicker-light">NDF Plus Programm</p>
                     <h2>Mehr als nur Material und Montage</h2>
-
                 </div>
 
                 <div class="feature-grid">
                     <div class="feature-card">
                         <h3>Planung</h3>
-                        <p>>> Kostenfreie Projektierung und Schnellauslegung<br>
+                        <p>
+                            >> Kostenfreie Projektierung und Schnellauslegung<br>
                             >> Heizlastberechnung nach DIN EN 12831<br>
                             >> Heizflächenberechnung nach DIN EN 1264<br>
                             >> CAD-gestützte Montageplanung<br>
@@ -104,10 +128,9 @@
                 <div class="section-header">
                     <p class="section-kicker">Leistungen & Angebote</p>
                     <h2>Aktuelle Preise</h2>
-
                 </div>
 
-                <article class="price-block">
+                <article id="tackersystem" class="price-block">
                     <div class="price-block-header">
                         <div>
                             <p class="price-category">Flächen-Warmwasser-Fußbodenheizung</p>
@@ -117,22 +140,26 @@
                     </div>
 
                     <div class="umfang-block">
-                        <h4>Im Preis inklusive</h4>
-                        <ul>
-                            <li>Baustelleneinrichtung</li>
-                            <li>Müllentsorgung</li>
-                            <li>Bauleitung</li>
-                            <li>Heizflächenauslegung</li>
-                            <li>Abdrücken der Fußbodenheizung mit Luft</li>
-                        </ul>
+                        <div>
+                            <h4>Im Preis inklusive</h4>
+                            <ul>
+                                <li>Baustelleneinrichtung</li>
+                                <li>Müllentsorgung</li>
+                                <li>Bauleitung</li>
+                                <li>Heizflächenauslegung</li>
+                                <li>Abdrücken der Fußbodenheizung mit Luft</li>
+                            </ul>
+                        </div>
 
-                        <h4>Im Preis nicht inklusive</h4>
-                        <ul>
-                            <li>Montage der Verteiler</li>
-                            <li>Schränke und Klemmleisten</li>
-                            <li>Stellantriebe</li>
-                            <li>Raumthermostate</li>
-                        </ul>
+                        <div>
+                            <h4>Im Preis nicht inklusive</h4>
+                            <ul>
+                                <li>Montage der Verteiler</li>
+                                <li>Schränke und Klemmleisten</li>
+                                <li>Stellantriebe</li>
+                                <li>Raumthermostate</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="price-table">
@@ -180,7 +207,7 @@
                     </div>
                 </article>
 
-                <article class="price-highlight">
+                <article id="fraessystem" class="price-highlight">
                     <div class="price-highlight-image">
                         <img src="bilder/fraessystem.jpg" alt="Frässystem" />
                     </div>
@@ -256,6 +283,9 @@
                             <img src="bilder/qrcode.png" alt="QR-Code" />
                         </div>
                         <p id="last-update">Preise werden geladen...</p>
+                        <button id="change-access-btn" class="btn btn-secondary small-button" type="button">
+                            Passwort wechseln
+                        </button>
                     </div>
                 </div>
             </div>
